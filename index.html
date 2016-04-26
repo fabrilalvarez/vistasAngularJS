@@ -1,0 +1,33 @@
+<!DOCTYPE  html>
+<!--ng-app hace referencia al nombre de nuestro modulo-->
+<html lang="es" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- Aqui va css -->
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li><a href="/index.html">index</a></li>
+            <li><a href="/pagina1.html">pg1</a></li>
+            <li><a href="/pagina2.html">pg2</a></li>
+        </ul>
+    </div>
+    <form ng-controller="pagina1" method="get" action="/pagina1.html">
+        <button type="submit">{{ buttonName }}</button>
+    </form>
+    <p ng-controller="pagina1">{{ nombre }}</p>
+    <button ng-controller="pagina1" ng-click="go()">{{ buttonName }}</button>
+    <p ng-controller="pagina2">{{ nombre }}</p>
+    <button ng-controller="pagina2" href="/pagina2.html">{{ buttonName }}</button>
+    <!--aquí es donde cargarán todas las vistas dependiendo de la url-->
+    <div ng-view></div>
+    <script type="text/javascript" src="lib/angular.js"></script>
+    <script type="text/javascript" src="lib/angular-route.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+</body>
+
+</html>

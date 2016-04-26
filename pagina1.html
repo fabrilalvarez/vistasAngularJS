@@ -1,0 +1,23 @@
+<!DOCTYPE  html>
+<!--ng-app hace referencia al nombre de nuestro modulo-->
+<html lang="es" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- Aqui va css -->
+</head>
+
+<body>
+    <h1>pagina1</h1>
+    <!-- 
+    <button ng-click="pagina1">pagina 1</button>
+    <button ng-click="pagina2">pagina 2</button>
+    -->
+    <!--aquí es donde cargarán todas las vistas dependiendo de la url-->
+    <div ng-view></div>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+</body>
+
+</html>
